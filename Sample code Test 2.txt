@@ -1,0 +1,39 @@
+<dependencies>
+    <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>2.12.3</version>
+    </dependency>
+    <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-core</artifactId>
+        <version>2.12.3</version>
+    </dependency>
+    <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-annotations</artifactId>
+        <version>2.12.3</version>
+    </dependency>
+</dependencies>
+Step 2: Create Data Models
+
+Define the data models that represent the request and response structures.
+
+ChatGPTRequest.java
+package com.example.demo.model;
+
+import java.util.List;
+
+public class ChatGPTRequest {
+    private String model;
+    private List<Message> messages;
+
+    // Getters and setters
+
+    public static class Message {
+        private String role;
+        private String content;
+
+        // Getters and setters
+    }
+}
